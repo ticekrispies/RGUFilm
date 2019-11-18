@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html style="background-color:black;">
+<head>
+  
+  <title>RGU Film Society - Directors</title>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'>
+
+  <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+  <!--- Load Bootstrap Framework --->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, address, phone, icons" />
+
+  <style>
+        /* RIBBON BANNER */ 
+        .ribbon {
+         font-size: 30px !important;
+         font: normal 45px 'Cookie', cursive;
+         width: 40%;
+            
+         position: relative;
+         background: #595959;
+         color: #fff;
+         text-align: center;
+         padding: 1em 2em; 
+         margin: 2em auto 3em;
+        }
+        .ribbon:before, .ribbon:after {
+         content: "";
+         position: absolute;
+         display: block;
+         bottom: -1em;
+         border: 1.5em solid #404040;
+         z-index: -1;
+        }
+        .ribbon:before {
+         left: -2em;
+         border-right-width: 1.5em;
+         border-left-color: transparent;
+        }
+        .ribbon:after {
+         right: -2em;
+         border-left-width: 1.5em;
+         border-right-color: transparent;
+        }
+        .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+         content: "";
+         position: absolute;
+         display: block;
+         border-style: solid;
+         border-color:  #4d4d4d transparent transparent transparent;
+         bottom: -1em;
+        }
+        .ribbon .ribbon-content:before {
+         left: 0;
+         border-width: 1em 0 0 1em;
+        }
+        .ribbon .ribbon-content:after {
+         right: 0;
+         border-width: 1em 1em 0 0;
+        }
+        /*DIRECTOR OF THE MONTH SLIDESHOW*/
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+        * {
+          box-sizing: border-box;
+        }
+        img {
+          vertical-align: middle;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 16%;
+          }
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #e0ac1c;
+          padding: 2px 16px;
+          color: white;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+        /* Text for Tarantino*/
+        .TarantinoDesc {
+          border: 1px;
+          padding: 8px;
+        }
+        h3 {
+          text-align: center;
+          text-transform: uppercase;
+          color: #333;
+        }
+        .yellowText
+        {
+            color:#e0ac1c;
+        }
+        /*GALLERY OF DIRECTORS*/
+                div.gallery {
+                    margin: 5px;
+                    border: 1px solid #ccc;
+                    float: left;
+                    width: 400px;
+                }
+                        
+                div.gallery:hover {
+                    border: 1px solid #777;
+                }
+                        
+                div.gallery img {
+                    width: 100%;
+                    height: auto;
+                }
+                        
+                div.desc {
+                    padding: 15px;
+                    text-align: center;
+                    font-size: 22px;
+                }
+                div.paragraph{
+                    text-align: center;
+                    color: #e0ac1c;
+                }
+                div.ParagraphDesc{
+                    text-align: center;
+                    color:#222;
+                    font-family:Arial, Helvetica, sans-serif;
+                    font-size: 28px;
+                }
+
+                .ribbon-content{
+                color:  #ffffff;
+                font: normal 36px 'Didot', cursive;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 0;
+                }
+        </style>
+</head>
+<body>
+
+    <nav>
+
+        <a class="Logo" href="index.html">
+          <img src="Logo.jpg" alt="Film Club Logo" style="width: 300px; height: 200px; border: 0px; border-radius: 5%;">
+        </a>
+          
+        <ul class="navul">
+           <li class="navli"><a href="index.html">Home</a></li>
+    
+            <li class="navdropdown">
+              <a href="javascript:void(0)" class="navdropbtn">Cinema</a>
+               <div class="navdropdown-content">
+                  <a href="filmhistory.html">History of Film</a>
+                  <a href="newMovies.html">New Movies</a>
+                  <a href="directors.html">Directors</a>
+                  <a href="ShortFilms.html">Short Movies</a>
+    
+           <li class="navdropdown">
+             <a href="javascript:void(0)" class="navdropbtn">About Us</a>
+               <div class="navdropdown-content">
+                  <a href="events.html">Events</a>
+                  <a href="currentmembers.html">Current Members</a>
+                  <a href="contact.html">Contact Us</a>
+                  <a href="gallery.html">Gallery</a>
+    
+                    <li class="navli" class="current"><a href="reviews.html">Reviews</a></li> 
+    
+                  <form class="example" action="#">
+                   <input type="text" placeholder="Search.." name="search">
+                   <button type="submit"><i class="fa fa-search"></i></button>
+                 </form>       
+    
+                </div>
+              </div>
+            </li>
+        </ul>        
+  </nav>
+
+  <!-- --------- CONTENT START ------>
+<div class="row">
+        <div class="directorsleftcolumn">
+          <div class="card">
+              <h2><div class="main">
+                    <hr>
+                    
+                    <h1 class="ribbon">
+                            <strong class="ribbon-content">Famous Directors</strong>
+                         </h1></h2>
+                <h2 style="text-align:center"><b>Director of the Month:<br> <u>Quentin Tarantino</u></b></h2>
+
+                <div class="container">
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="quentintarantino.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="pulpfiction.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="killbill.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                    
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="jackiebrown.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                
+                  <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="hatefuleight.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                    
+                  <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="reservoirdogs.jpg" style="width:50%; height:50%" class=center>
+                  </div>
+                    
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+                
+                  <div class="row">
+                    <div class="column">
+                      <img class="demo cursor" src="quentintarantino.jpg" style="width:100%" onclick="currentSlide(1)" alt="Quentin Tarantino">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="pulpfiction.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pulp Fiction">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="killbill.jpg" style="width:100%"onclick="currentSlide(3)" alt="Kill Bill Part 1">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="jackiebrown.jpg" style="width:100%" onclick="currentSlide(4)" alt="Jackie Brown">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="hatefuleight.jpg" style="width:100%" onclick="currentSlide(5)" alt="Hateful Eight">
+                    </div>    
+                    <div class="column">
+                      <img class="demo cursor" src="reservoirdogs.jpg" style="width:100%" onclick="currentSlide(6)" alt="Reservoir Dogs">
+                    </div>
+                  </div>
+                </div>
+   
+   
+   <div class="TarantinoDesc">
+           <h3><u>All about Tarantino</u></h3>
+               <p3>Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee. Quentin moved with his mother to Torrance, California, when he was four years old.
+   
+                               In January of 1992, first-time writer-director Tarantino's <span class="yellowText">Reservoir Dogs (1992) </span>appeared at the Sundance Film Festival. The film garnered critical acclaim and the director became a legend immediately. Two years later, he followed up Dogs success with <span class="yellowText">Pulp Fiction (1994)</span> which premiered at the Cannes film festival, winning the coveted Palme D'Or Award. At the 1995 Academy Awards, it was nominated for the best picture, best director and best original screenplay. Tarantino and writing partner Roger Avary came away with the award only for best original screenplay. In 1995, Tarantino directed one fourth of the anthology <span class="yellowText">Four Rooms (1995)</span> with friends and fellow auteurs Alexandre Rockwell, Robert Rodriguez and Allison Anders. The film opened December 25 in the United States to very weak reviews. Tarantino's next film was <span class="yellowText">From Dusk Till Dawn (1996)</span>, a vampire/crime story which he wrote and co-starred with George Clooney. The film did fairly well theatrically.
+                               
+                               Since then, Tarantino has helmed several critically and financially successful films, including <span class="yellowText">Jackie Brown (1997)</span>, <span class="yellowText">Kill Bill: Vol. 1 (2003)</span>, <span class="yellowText">Kill Bill: Vol. 2 (2004)</span>, <span class="yellowText">Inglourious Basterds (2009)</span>, <span class="yellowText">Django Unchained (2012)</span> and <span class="yellowText">The Hateful Eight (2015)</span>.
+               <a target="_blank" href="https://en.wikipedia.org/wiki/Quentin_Tarantino">Read More Here...</a></p3>
+   </div>
+   
+   <div class="ParagraphDesc"><p>
+           <u>Our Favourite Directors</u> </p>
+       </div>
+        
+        <p><br></p>
+       
+       <!-- IMAGE GALLERY OF DIRECTORS-->
+               <div class="gallery">
+                 <a target="_blank" href="davidfincher.jpg">
+                   <img src="davidfincher.jpg" alt="David Fincher" width="800" height="400">
+                 </a>
+                 <div class="desc"><b>David Fincher</b></div>
+                 <div class="paragraph"><i><u>Director of Fight Club</u><br></i></div>
+                 <div class="about"><br><u>Other Notable Films:</u> Girl with the Dragon Tattoo<br>
+                   <u>Age:</u> 57 <br><u> Awards: </u> Golden Globe Award for Best Director</div>
+       
+                 </div>
+               </div>
+               
+               <div class="gallery">
+                 <a target="_blank" href="wesanderson.jpg">
+                   <img src="wesanderson.jpg" alt="Wes Anderson" width="800" height="400">
+                 </a>
+                 <div class="desc"><b>Wes Anderson</b></div>
+                 <div class="paragraph"><i><u>Director of the Royal Tenenbaums</i></u></div>
+                 <div class="about"><br><u>Other Notable Films:</u> Moonrise Kingdom, Isle of Dogs<br>
+               <u>Age:</u> 50 <br><u>Awards:</u> Silver Bear for Best Director </div>
+               </div>
+               
+               <div class="gallery">
+                 <a target="_blank" href="hayaomiyazaki.jpg">
+                   <img src="hayaomiyazaki.jpg" alt="Hayao Miyazaki" width="800" height="400">
+                 </a>
+                 <div class="desc"><b>Hayao Miyazaki</b></div>
+                 <div class="paragraph"><i><u>Director of Spirited Away</i></u></div>
+                 <div class="about"><br><u>Other Notable Films:</u> Princess Mononoke, Nausicaa <br>
+               <u>Age:</u> 78 <br> <u>Awards:</u> Golden Bear for Best Director</div>
+               </div>
+               
+               <div class="gallery">
+                 <a target="_blank" href="timburton.jpg">
+                   <img src="timburton.jpg" alt="Tim Burton" width="800" height="400">
+                 </a>
+                 <div class="desc">Tim Burton</div>
+                 <div class="paragraph"><i><u>Director of The Nightmare Before Christmas</u></i></div>
+                 <div class="about"><br><u>Other Notable Films:</u> Corpse Bride, Beetlejuice <br>
+                   <u>Age:</u> 61 <br> <u>Awards:</u> Golden Lion for Lifetime Achievement</div>
+               </div>
+               <div class="gallery">
+                       <a target="_blank" href="martinscorsese.jpg">
+                         <img src="martinscorsese.jpg" alt="Martin Scorsese" width="800" height="400">
+                       </a>
+                       <div class="desc">Martin Scorsese</div>
+                       <div class="paragraph"><i><u>Director of Goodfellas</u></i></div>
+                       <div class="about"><br><u>Other Notable Films:</u> Wolf of Wall Street, Taxi Driver <br>
+                         <u>Age:</u> 77 <br> <u>Awards:</u> Academy Award for Best Picture</div>
+                     </div>
+                     <div class="gallery">
+                           <a target="_blank" href="guillermodeltoro.jpg">
+                             <img src="guillermodeltoro.jpg" alt="Guillermo Del Toro" width="800" height="400">
+                           </a>
+                           <div class="desc">Guillermo Del Toro</div>
+                           <div class="paragraph"><i><u>Director of Pan's Labyrinth</u></i></div>
+                           <div class="about"><br><u>Other Notable Films:</u> The Shape of Water, Orphanage <br>
+                             <u>Age:</u> 55 <br> <u>Awards:</u> Academy Award for Best Picture</div>
+                         </div>
+          
+        </div>
+      </div>
+
+
+<!-- END OF CONTENT -->
+
+<footer class="footer-distributed">
+ 
+  <div class="footer-left">
+      <img src="logo.jpg">
+    <h3>About our <span>Film Society</span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      |
+      <a href="#">About us</a>
+      |
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2019 Robert Gordon University</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>Garthdee House,
+          Garthdee Rd,
+          Aberdeen AB10 7AQ</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>01224 262000</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:thijs_jager@live.nl">filmsociety@rgu.ac.uk</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the society</span>
+      Hi there! We are an Aberdeen-based film society at the Robert Gordon University. Here our members and members-to-be are welcome to discuss all and everything film, art and related. We plan trips, events, gatherings and more content!</p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+
+</body>
+</html>

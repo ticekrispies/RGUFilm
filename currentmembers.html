@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html style="background-color:black;">
+<head>
+  
+  <title>RGU Film Society - Current members</title>
+  <link rel='icon' href='favicon.ico' type='image/x-icon'>
+
+  <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+  <!--- Load Bootstrap Framework --->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, address, phone, icons" />
+
+</head>
+
+<style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          background-color: #f1f1f1;
+          padding: 20px;
+          font-family: Arial;
+        }
+        .main {
+          max-width: 1000px;
+          margin: auto;
+        }
+        h1 { 
+            color:  #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+          font-size: 50px;
+          word-break: break-all;
+        }
+        .ribbon {
+         font-size: 30px !important;
+         font: normal 45px 'Cookie', cursive;
+         /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+         width: 65%;
+            
+         position: relative;
+         background: #595959;
+         color: #fff;
+         text-align: center;
+         padding: 1em 2em; /* Adjust to suit */
+         margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+        }
+        .ribbon:before, .ribbon:after {
+         content: "";
+         position: absolute;
+         display: block;
+         bottom: -1em;
+         border: 1.5em solid #404040;
+         z-index: -1;
+        }
+        .ribbon:before {
+         left: -2em;
+         border-right-width: 1.5em;
+         border-left-color: transparent;
+        }
+        .ribbon:after {
+         right: -2em;
+         border-left-width: 1.5em;
+         border-right-color: transparent;
+        }
+        .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+         content: "";
+         position: absolute;
+         display: block;
+         border-style: solid;
+         border-color:  #4d4d4d transparent transparent transparent;
+         bottom: -1em;
+        }
+        .ribbon-content{
+        color:  #ffffff;
+        font: normal 36px 'Didot', cursive;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        }
+        
+        .ribbon .ribbon-content:before {
+         left: 0;
+         border-width: 1em 0 0 1em;
+        }
+        .ribbon .ribbon-content:after {
+         right: 0;
+         border-width: 1em 1em 0 0;
+        }
+        .speech-bubble {
+            background: #e0ac1c;
+            -webkit-border-radius: 4px;
+                    border-radius: 4px;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            margin: 0 auto 40px;
+            max-width: 400px;
+            padding: 15px;
+            position: relative;
+            float: center;
+        }
+        .speech-bubble p {
+            margin: 0 0 10px;
+        }
+        .speech-bubble p:last-of-type {
+            margin-bottom: 0;
+        }
+        .speech-bubble::after {
+            border-left: 20px solid transparent;
+            border-top: 20px solid #c08d00;
+            bottom: -20px;
+            content: "";
+            position: absolute;
+            right: 20px;
+        }
+        /*Creates rows of images*/
+        .row {
+          margin: 10px -16px;
+        }
+        /* Add padding between each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        /* Creates three equal columns that directly float beside eachother*/
+        .column {
+          float: left;
+          width: 33.33%;
+        /* BY DEFAULT HIDE ALL ITEMS SO THEY DON'T DISPLAY AT ONCE */
+          display: none; 
+        }
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        /* Website Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        /* Add the show class to the filtered elements */
+        .show {
+          display: block;
+        }
+        /* Button design */
+        .btn{
+            border: none;
+            border-radius: 12px;
+            outline: none;
+            padding: 12px 16px;
+            background-color:#333;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Change colour of button when hovered over */
+        .btn:hover {
+            background-color: #8c8c8c;
+        }
+        /* Change colour of the button when active */
+        .btn.active {
+            background-color: #e0ac1c;
+            color: white;
+        }
+        </style>
+<body>
+
+    <nav>
+
+        <a class="Logo" href="index.html">
+          <img src="Logo.jpg" alt="Film Club Logo" style="width: 300px; height: 200px; border: 0px; border-radius: 5%;">
+        </a>
+          
+        <ul class="navul">
+           <li class="navli"><a href="index.html">Home</a></li>
+    
+            <li class="navdropdown">
+              <a href="javascript:void(0)" class="navdropbtn">Cinema</a>
+               <div class="navdropdown-content">
+                  <a href="filmhistory.html">History of Film</a>
+                  <a href="newMovies.html">New Movies</a>
+                  <a href="directors.html">Directors</a>
+                  <a href="ShortFilms.html">Short Movies</a>
+    
+           <li class="navdropdown">
+             <a href="javascript:void(0)" class="navdropbtn">About Us</a>
+               <div class="navdropdown-content">
+                  <a href="events.html">Events</a>
+                  <a href="currentmembers.html">Current Members</a>
+                  <a href="contact.html">Contact Us</a>
+                  <a href="gallery.html">Gallery</a>
+    
+                    <li class="navli" class="current"><a href="reviews.html">Reviews</a></li> 
+    
+                  <form class="example" action="#">
+                   <input type="text" placeholder="Search.." name="search">
+                   <button type="submit"><i class="fa fa-search"></i></button>
+                 </form>       
+    
+                </div>
+              </div>
+            </li>
+        </ul>        
+  </nav>
+    
+<!-- THIS IS WHERE THE CONTENT STARTS -->
+
+<!-- Main part of Current Members -->
+<div class="main">
+<hr>
+
+<h1 class="ribbon">
+        <strong class="ribbon-content">Meet our Current Members!</strong>
+     </h1>
+     
+<div class="speech-bubble">
+            <p>"Film Society is the most friendly and enjoyable club at RGU full of passionate and talented film enthuasiasts! Come join us in N533 every Wednesday!"</p>
+            <p><strong>Natasha Henry</strong></p>
+            <p> <i>Society Treasurer</i></p>
+        </div>
+        
+
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> All</button>
+    <button class="btn" onclick="filterSelection('presidents')"> Presidents</button>
+    <button class="btn" onclick="filterSelection('administrative')"> Administrative</button>
+    <button class="btn" onclick="filterSelection('creativedirectors')"> Film Makers</button>
+</div>
+
+</div>
+<!-- Current Members Photo Gallery -->
+
+<div class="row" >
+        <div class="column presidents">
+          <div class="content">
+            <img src="Kyle-Martin.jpg" alt="KyleMartin" style="width:100%">
+            <h4>Kyle Martin</h4>
+            <p>Society President</p>
+          </div>
+        </div>
+        <div class="column presidents">
+          <div class="content">
+          <img src="bigbird.jpg" alt="BigBird" style="width:100%">
+            <h4>Big Bird</h4>
+            <p>Vice President</p>
+          </div>
+        </div>
+
+        
+        <div class="column administrative">
+          <div class="content">
+            <img src="totoro.jpg" alt="LauraMckell" style="width:100%">
+            <h4>Laura Mckell</h4>
+            <p>Tech Support</p>
+          </div>
+        </div>
+        <div class="column administrative">
+                <div class="content">
+                <img src="kermit.jpg" alt="NatashaHenry" style="width:100%">
+                  <h4>Natasha Henry</h4>
+                  <p>Treasurer</p>
+                </div>
+              </div>
+        <div class="column administrative">
+          <div class="content">
+          <img src="saddog.jpg" alt="ThijsJager" style="width:100%">
+            <h4>Thijs Jager</h4>
+            <p>Tech Support</p>
+          </div>
+        </div>
+        <div class="column administrative">
+          <div class="content">
+          <img src="wahoorat.jpg" alt="AdelLuong" style="width:100%">
+            <h4>Adel Luong</h4>
+            <p>Secretary</p>
+          </div>
+        </div>
+        <div class="column administrative">
+                <div class="content">
+                <img src="dog.jpg" alt="SamCoates" style="width:100%">
+                  <h4>Sam Coates</h4>
+                  <p>Events Organiser</p>
+                </div>
+              </div>
+      
+        <div class="column creativedirectors">
+          <div class="content">
+            <img src="quentintarantino.jpg" alt="quentintarantino" style="width:100%">
+            <h4>Quentin Tarantino</h4>
+            <p>Director of Pulp Fiction</p>
+          </div>
+        </div>
+        <div class="column creativedirectors">
+          <div class="content">
+          <img src="davidfincher.jpg" alt="davidfincher" style="width:100%">
+            <h4>David Fincher</h4>
+            <p>Director of Fight Club</p>
+          </div>
+        </div>
+        <div class="column creativedirectors">
+                <div class="content">
+                <img src="martinscorsese.jpg" alt="martinscorsese" style="width:100%">
+                  <h4>Martin Scorsese</h4>
+                  <p>Director of Goodfellas</p>
+                </div>
+              </div>
+              <div class="column creativedirectors">
+                    <div class="content">
+                    <img src="timburton.jpg" alt="timburton" style="width:100%">
+                      <h4>Tim Burton</h4>
+                      <p>Director of Corpse Bride</p>
+                    </div>
+                  </div>
+                  <div class="column creativedirectors">
+                        <div class="content">
+                        <img src="hayaomiyazaki.jpg" alt="hayaomiyazaki" style="width:100%">
+                          <h4>Hayao Miyazaki</h4>
+                          <p>Director of Spirited Away</p>
+                        </div>
+                      </div>
+                      <div class="column creativedirectors">
+                            <div class="content">
+                            <img src="wesanderson.jpg" alt="wesanderson" style="width:100%">
+                              <h4>Wes Anderson</h4>
+                              <p>Director of The Royal Tenenbaums</p>
+                            </div>
+                          </div>
+                          <div class="column creativedirectors">
+                                <div class="content">
+                                <img src="guillermodeltoro.jpg" alt="huillermodeltoro" style="width:100%">
+                                  <h4>Guillermo Del Toro</h4>
+                                  <p>Director of Pan's Labyrinth</p>
+                                </div>
+                              </div>
+</div>
+</div>
+        
+
+<!-- END OF CONTENT -->
+
+<footer class="footer-distributed">
+ 
+  <div class="footer-left">
+      <img src="logo.jpg">
+    <h3>About our <span>Film Society</span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      |
+      <a href="#">About us</a>
+      |
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2019 Robert Gordon University</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>Garthdee House,
+          Garthdee Rd,
+          Aberdeen AB10 7AQ</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>01224 262000</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:thijs_jager@live.nl">filmsociety@rgu.ac.uk</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the society</span>
+      Hi there! We are an Aberdeen-based film society at the Robert Gordon University. Here our members and members-to-be are welcome to discuss all and everything film, art and related. We plan trips, events, gatherings and more content!</p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            XRemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) XAddClass(x[i], "show");
+          }
+        }
+        
+        function XAddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function XRemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Create active class for the currently clicked on button to highlight it
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+</script>
+
+</body>
+</html>
